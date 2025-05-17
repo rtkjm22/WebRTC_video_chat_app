@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      【即試せる！】Webでビデオ通話してみたくない？Nest.js x WebRTCで作ってみた
+    </title>
+  </head>
+  <body>
+    <h1>
+      【即試せる！】Webでビデオ通話してみたくない？Nest.js x WebRTCで作ってみた
+    </h1>
+
+    <!-- ↓ これが自分自身の画面になります -->
+    <video
+      id="localVideo"
+      autoplay
+      playsinline
+      muted
+      style="width: 300px"
+    ></video>
+
+    <!-- ↓ これが相手の画面になります -->
+    <video id="remoteVideo" autoplay playsinline style="width: 300px"></video>
+
+    <script src="https://cdn.socket.io/4.5.3/socket.io.min.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

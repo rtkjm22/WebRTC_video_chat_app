@@ -16,14 +16,14 @@ navigator.mediaDevices
   .then((stream) => {
     localVideo.srcObject = stream
 
-    // 自分自身が参加した場合のイベント
+    // 新規ユーザーが参加した時に、既存ユーザー向けに発火
     socket.on('user-joined', (userId) => {
       if (!peerConnections[userId]) {
         // STUNサーバーを通して、自分のグローバルIPアドレスとポート番号を取得
         const peerConnection = new RTCPeerConnection(configuration)
         peerConnections[userId] = peerConnection
 
-        // ローカルストリームを追加し、各トラックをpeerConnection追加追加して、相手に送る準備を行う
+        // ローカルストリームを追加し、各種トラックをpeerConnectionに追加して、相手に送る準備を行う
         stream
           .getTracks()
           .forEach((track) => peerConnection.addTrack(track, stream))
@@ -91,6 +91,7 @@ navigator.mediaDevices
       const peerConnection = peerConnections[from]
 
       if (signal.sdp) {
+        // オファーのアンサー作成
         peerConnection
           .setRemoteDescription(new RTCSessionDescription(signal.sdp))
           .then(() => {
@@ -108,6 +109,7 @@ navigator.mediaDevices
             }
           })
       } else if (signal.candidate) {
+        // 既存の接続網に登録処理
         peerConnection
           .addIceCandidate(new RTCIceCandidate(signal.candidate))
           .catch((err) => {
@@ -116,7 +118,7 @@ navigator.mediaDevices
       }
     })
 
-    // 自分のユーザーIDをサーバーに送信
+    // 自分が新規参加した場合にサーバーに自分自身のIDを送信
     socket.emit('join', socket.id)
   })
   .catch((error) => {

@@ -6,6 +6,11 @@
 
 https://github.com/user-attachments/assets/5b48c534-eeee-420e-9d38-f9c3c50e7826
 
+## 記事URL
+Qiitaにて本リポジトリの解説を行っているので、ご参照ください！
+
+- [【即試せる！】Webでビデオ通話してみたくない？Nest.js × WebRTCで作ってみた]()
+
 ## 実行方法（所要時間：約5分）
 
 #### ①ソースコードをクローン
@@ -36,10 +41,7 @@ http://localhost:3000
 http://localhost:3000
 ```
 
-## 記事URL
-Qiitaにて本リポジトリの解説を行っているので、ご参照ください！
 
-- [【即試せる！】Webでビデオ通話してみたくない？Nest.js × WebRTCで作ってみた]()
 
 ## License
 

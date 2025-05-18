@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/5b48c534-eeee-420e-9d38-f9c3c50e7826
 ## 記事URL
 Qiitaにて本リポジトリの解説を行っているので、ご参照ください！
 
-- [【即試せる！】Webでビデオ通話してみたくない？Nest.js × WebRTCで作ってみた]()
+- [【即試せる！】Webでビデオ通話してみたくない？Nest.js × WebRTCで作ってみた](https://qiita.com/rtkjm22/items/ee08228f170c9e6e81a3)
 
 ---
 

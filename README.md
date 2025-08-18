@@ -4,9 +4,13 @@
 
 ## 動作イメージ
 
-https://github.com/user-attachments/assets/5b48c534-eeee-420e-9d38-f9c3c50e7826
+https://github.com/user-attachments/assets/66674cad-37d3-4e5c-a39c-42869a38a288
 
 ---
+
+
+
+
 
 ## 記事URL
 Qiitaにて本リポジトリの解説を行っているので、ご参照ください！
